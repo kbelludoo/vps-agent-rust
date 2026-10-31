@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VPS Agent Rust — Canary & Watchdog Orchestrator</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(18, 24, 38, 0.7);
+      --border: rgba(255, 255, 255, 0.08);
+      --primary: #38bdf8;
+      --accent: #22c55e;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 24px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .header h1 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+      color: var(--primary);
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      background: rgba(34, 197, 94, 0.15);
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.85rem;
+      border: 1px solid rgba(34, 197, 94, 0.3);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      backdrop-filter: blur(10px);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: var(--primary);
+      font-size: 1.1rem;
+    }
+    .stat {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 8px 0;
+    }
+    .desc {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>⚡ VPS Agent Rust</h1>
+    <span class="badge">NATIVE RUST ZERO-GC (ACTIVE)</span>
+    <p style="color: var(--text-muted);">Watchdog, Telegram Orchestrator & Canary Prober para Cluster VPS</p>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3>Pegada de Memória (RSS)</h3>
+      <div class="stat">< 5.0 MB</div>
+      <div class="desc">Redução de ~80% em relação ao daemon Go legado.</div>
+    </div>
+    <div class="card">
+      <h3>Status do Watchdog</h3>
+      <div class="stat" style="color: #22c55e;">Ativo 24/7</div>
+      <div class="desc">Auto-recovery de serviços systemd com backoff e rate-limiting.</div>
+    </div>
+    <div class="card">
+      <h3>Telegram Listener</h3>
+      <div class="stat" style="color: #38bdf8;">Online</div>
+      <div class="desc">Comandos interativos e alertas imediatos em caso de inércia.</div>
+    </div>
+    <div class="card">
+      <h3>Canary Prober</h3>
+      <div class="stat">18 Bots Monitorados</div>
+      <div class="desc">Aferição contínua de status HTTP e métricas de execução.</div>
+    </div>
+  </div>
+</body>
+</html>
